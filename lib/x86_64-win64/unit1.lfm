@@ -1,0 +1,48 @@
+object Form1: TForm1
+  Left = 649
+  Height = 179
+  Top = 110
+  Width = 540
+  Caption = 'Цифровые часы'
+  ClientHeight = 179
+  ClientWidth = 540
+  OnCreate = FormCreate
+  PopupMenu = PopupMenu1
+  LCLVersion = '2.2.6.0'
+  object LabelClock: TLabel
+    Left = 16
+    Height = 128
+    Top = 32
+    Width = 453
+    Caption = 'LabelClock'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -96
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 504
+    Top = 8
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 464
+    Top = 8
+    object MenuItemFont: TMenuItem
+      Caption = 'Выбрать шрифт'
+      OnClick = MenuItemFontClick
+    end
+    object MenuItemExit: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItemExitClick
+    end
+  end
+  object FontDlg: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 424
+    Top = 8
+  end
+end
